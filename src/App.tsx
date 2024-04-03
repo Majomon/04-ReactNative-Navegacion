@@ -1,11 +1,10 @@
-import {Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {Text} from 'react-native';
 
-const App = () => {
+export default function App() {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <NavigationContainer>
+      <Text>App.tsx</Text>
+    </NavigationContainer>
   );
-};
-
-export default App;
+}
