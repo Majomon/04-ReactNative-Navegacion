@@ -1,14 +1,16 @@
 import {createStackNavigator} from '@react-navigation/stack';
+import {HomeScreen} from '../screens/home/HomeScreen';
+import {ProductsScreen} from '../screens/products/ProductsScreen';
+import {SettingsScreen} from '../screens/settings/SettingsScreen';
 
 const Stack = createStackNavigator();
 
-function MyStack() {
+export const StackNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Notifications" component={Notifications} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Settings" component={Settings} />
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Products" component={ProductsScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
-}
+};
