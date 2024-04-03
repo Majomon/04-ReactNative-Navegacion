@@ -1,10 +1,12 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 
-export const globalColors={
+export const globalColors = {
 
 }
 
-export const globalStyles= StyleSheet.create({
-    
+
+
+export const globalStyles = StyleSheet.create({
+
 })
