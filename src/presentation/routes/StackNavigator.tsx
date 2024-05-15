@@ -5,7 +5,14 @@ import {ProductsScreen} from '../screens/products/ProductsScreen';
 import {SettingsScreen} from '../screens/settings/SettingsScreen';
 import {ProductScreen} from '../screens/products/ProductScreen';
 
-const Stack = createStackNavigator();
+export type RootsStackParams = {
+  Home: undefined;
+  Product: {id: number; name: string};
+  Products: undefined;
+  Settings: undefined;
+};
+
+const Stack = createStackNavigator<RootsStackParams>();
 
 export const StackNavigator = () => {
   return (
