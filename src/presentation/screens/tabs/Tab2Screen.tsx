@@ -1,6 +1,10 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 
 export const Tab2Screen = () => {
-  return <View>Tab2Screen</View>;
+  return (
+    <View>
+      <Text>Tab2Screen</Text>
+    </View>
+  );
 };
