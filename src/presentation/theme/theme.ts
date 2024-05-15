@@ -23,7 +23,7 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: globalColors.primary,
     borderRadius: 5,
     padding: 10,
-    marginBottom:10,
+    marginBottom: 10,
     width: '100%',
     alignItems: 'center',
   },
@@ -33,5 +33,8 @@ export const globalStyles = StyleSheet.create({
     fontSize: 18,
   },
 
-
+  text: {
+    color: globalColors.dark,
+    fontSize: 20,
+  },
 });
