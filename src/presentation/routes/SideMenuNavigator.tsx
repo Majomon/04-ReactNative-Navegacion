@@ -9,11 +9,13 @@ import {StackNavigator} from './StackNavigator';
 import {ProfileScreen} from '../screens/profile/ProfileScreen';
 import React from 'react';
 import {globalColors} from '../theme/theme';
-import {View} from 'react-native';
+import {View, useWindowDimensions} from 'react-native';
 
 const Drawer = createDrawerNavigator();
 
 export const SideMenuNavigator = () => {
+  const dimensions = useWindowDimensions();
+
   return (
     <Drawer.Navigator
       drawerContent={props => <CustomDrawerContent {...props} />}
@@ -21,7 +23,7 @@ export const SideMenuNavigator = () => {
         // Para quitar el texto y menu de StackNavigator
         headerShown: false,
         // Animacion cuando se abre el drawer
-        drawerType: 'slide',
+        drawerType: dimensions.width >= 758 ? 'permanent' : 'slide',
         drawerActiveBackgroundColor: globalColors.primary,
         drawerActiveTintColor: 'white',
         drawerInactiveTintColor: globalColors.primary,
