@@ -1,13 +1,13 @@
-import React, {useEffect} from 'react';
-import {Pressable, Text, View} from 'react-native';
-import {globalStyles} from '../../theme/theme';
 import {
   DrawerActions,
   NavigationProp,
   useNavigation,
 } from '@react-navigation/native';
+import React, {useEffect} from 'react';
+import {Pressable, Text, View} from 'react-native';
 import {PrimaryButton} from '../../components';
 import {RootsStackParams} from '../../routes/StackNavigator';
+import {globalStyles} from '../../theme/theme';
 
 export const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp<RootsStackParams>>();
