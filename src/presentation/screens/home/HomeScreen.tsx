@@ -1,18 +1,15 @@
-import {
-  DrawerActions,
-  NavigationProp,
-  useNavigation,
-} from '@react-navigation/native';
-import React, {useEffect} from 'react';
-import {Pressable, Text, View} from 'react-native';
+import {NavigationProp, useNavigation} from '@react-navigation/native';
+import React from 'react';
+import {View} from 'react-native';
 import {PrimaryButton} from '../../components';
+import {HamburguerMenu} from '../../components/shared/HamburguerMenu';
 import {RootsStackParams} from '../../routes/StackNavigator';
 import {globalStyles} from '../../theme/theme';
 
 export const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp<RootsStackParams>>();
 
-  useEffect(() => {
+  /* useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
         <Pressable
@@ -21,10 +18,11 @@ export const HomeScreen = () => {
         </Pressable>
       ),
     });
-  }, []);
+  }, []); */
 
   return (
     <View style={globalStyles.container}>
+      <HamburguerMenu />
       <PrimaryButton
         onPress={() => navigation.navigate('Products')}
         label="Productos"
